@@ -23,7 +23,7 @@ export function gen(length) {
     for (k=0; k<string_len; k++) {
       string2 += letters.random();
     }
-    let number = Math.floor(Math.random() * 5) + 1;
+    let number = Math.floor(Math.random() * 6) + 1;
     switch(number) {
       case 1:
         output += "var "+string+" = "+num+";";
@@ -32,14 +32,17 @@ export function gen(length) {
         output += "const "+string+" = "+num+";";
         break;
       case 3:
-        output += "document.querySelector("+string+").selectionStyle("+string2+");";
+        output += "document.querySelector('"+string+"').selectionStyle('"+string2+"');";
         break;
       case 4:
-        output += "document.getElementById("+string+").innerHTML == "+string2+";";
+        output += "document.getElementById('"+string+"').innerHTML == "+string2+";";
         break;
       case 5:
         output += "var "+string+" = Math.random();";
         break;
+      case 6:
+          output += "document.getElementById('"+string+"').innerHTML == '"+string2+"';";
+          break;
     }
   }
 }
