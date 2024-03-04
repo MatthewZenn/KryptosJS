@@ -19,7 +19,7 @@ function gen(length) {
     num = Math.floor(Math.random() * (50 - 0 + 1) + 0);
     string += prefix.random()+snips.random()+suffix.random();
     string2 += prefix.random()+snips.random()+suffix.random();
-    let number = Math.floor(Math.random() * 8) + 1;
+    let number = Math.floor(Math.random() * 11) + 1;
     switch(number) {
       case 1:
         output += "var "+string+"="+num+";";
@@ -51,7 +51,7 @@ function gen(length) {
       case 10:
         output += "console.log('"+string2+"');";
         break;
-      case 1:
+      case 11:
         output += "window.close()";
         break;
     }
