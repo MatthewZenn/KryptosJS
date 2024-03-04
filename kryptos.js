@@ -1,4 +1,6 @@
-const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const snips = ['ou', 'ea', 'it', 'oo', 'ee', 'oa'];
+const prefix = ['sh', 'wh', 'st', 'th', 'pre', 'un', 'in', 'co', 'po', 'f', 'h', 'p'];
+const suffix = ['th', 'sh', 'ould', 'ld', 'ts', 'ght', 'is', 'ds', 'es', 'able', 'ize', 'rs'];
 var string_len = 0;
 var string = '';
 var string2 = '';
@@ -9,20 +11,14 @@ Array.prototype.random = function () {
   return this[Math.floor((Math.random()*this.length))];
 }
 
-export function gen(length) {
+function gen(length) {
   output = '';
   for (i=0; i<length; i++) {
     string = '';
     string2 = ''; 
     num = Math.floor(Math.random() * (50 - 0 + 1) + 0);
-    string_len = Math.floor(Math.random() * (12 - 5 + 1) + 5);
-    for (k=0; k<string_len; k++) {
-      string += letters.random();
-    }
-    string_len = Math.floor(Math.random() * (12 - 5 + 1) + 5);
-    for (k=0; k<string_len; k++) {
-      string2 += letters.random();
-    }
+    string += prefix.random()+snips.random()+suffix.random();
+    string2 += prefix.random()+snips.random()+suffix.random();
     let number = Math.floor(Math.random() * 8) + 1;
     switch(number) {
       case 1:
@@ -49,9 +45,18 @@ export function gen(length) {
       case 8:
         output += "const "+string+"='"+string2+"';";
         break;
+      case 9:
+        output += "javascript.alert('"+string2+"');";
+        break;
+      case 10:
+        output += "console.log('"+string2+"');";
+        break;
+      case 1:
+        output += "window.close()";
+        break;
     }
   }
 }
 
-gen(50);
+gen(30);
 console.log(output);
