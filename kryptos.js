@@ -12,37 +12,37 @@ Array.prototype.random = function () {
 
 function gen(length) {
   output = '';
-  for (i=0; i<length; i++) {
+  for (let i=0; i<length; i++) {
     string = '';
     string2 = ''; 
     num = Math.floor(Math.random() * (50 - 0 + 1) + 0);
     string += prefix.random()+snips.random()+suffix.random();
     string2 += prefix.random()+snips.random()+suffix.random();
-    let number = Math.floor(Math.random() * 11) + 1;
+    let number = Math.floor(Math.random() * 13) + 1;
     switch(number) {
       case 1:
-        output += "var "+string+"="+num+";";
+        output += "var "+string+" = "+num+";";
         break;
       case 2:
-        output += "const "+string+"="+num+";";
+        output += "const "+string+" = "+num+";";
         break;
       case 3:
         output += "document.querySelector('"+string+"').selectionStyle('"+string2+"');";
         break;
       case 4:
-        output += "document.getElementById('"+string+"').innerHTML=="+string2+";";
+        output += "document.getElementById('"+string+"').innerHTML == "+string2+";";
         break;
       case 5:
-        output += "var "+string+"=Math.random();";
+        output += "var "+string+" = Math.random();";
         break;
       case 6:
-        output += "document.getElementById('"+string+"').innerHTML=='"+string2+"';";
+        output += "document.getElementById('"+string+"').innerHTML == '"+string2+"';";
         break;
       case 7:
-        output += "var "+string+"='"+string2+"';";
+        output += "var "+string+" = '"+string2+"';";
         break;
       case 8:
-        output += "const "+string+"='"+string2+"';";
+        output += "const "+string+" = '"+string2+"';";
         break;
       case 9:
         output += "javascript.alert('"+string2+"');";
@@ -51,11 +51,20 @@ function gen(length) {
         output += "console.log('"+string2+"');";
         break;
       case 11:
-        output += "window.close()";
+        output += "window.close();";
+        break;
+      case 12:
+        output += "const "+string+" = require{ "+string+" }";
+        break;
+      case 13:
+        output += "from "+string2+" import *;";
+        break;
+      case 14:
+        output += "import { "+string2+" } from "+string+";";
         break;
     }
   }
+  return output;
 }
 
-gen(30);
-console.log(output);
+export { gen, output }
