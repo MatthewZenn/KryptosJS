@@ -12,6 +12,22 @@ body, html {
   display: none;
 }
 
+::selection {
+  color: white;
+  background-color: #79c0ff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: texfield;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -102,7 +118,7 @@ p {
   color: #79c0ff;
   background-color: transparent;
   border: none;
-  width: 20px;
+  width: 22px;
   min-width: 0;
   outline: none;
   font-size: 14pt;

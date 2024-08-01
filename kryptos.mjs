@@ -54,7 +54,7 @@ function gen(length) {
         output += "window.close();";
         break;
       case 12:
-        output += "const "+string+" = require{ "+string+" }";
+        output += "const "+string+" = require( "+string+" )";
         break;
       case 13:
         output += num+" == false;"
