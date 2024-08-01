@@ -60,7 +60,7 @@ function gen(length) {
         output += num+" == false;"
         break;
       case 14:
-        output += "import { "+string2+" } from "+string+";";
+        output += "import { "+string2+" } as "+string+";";
         break;
       case 15:
         output += "function "+string2+"() => { "+string+"() }";
