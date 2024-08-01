@@ -1,6 +1,6 @@
 ![logo](Assets/icon.png)
 # KryptosJS
-A javascript library that generates random javascript pseudo-code.
+A javascript library that generates random javascript pseudo-code. [Try it here!](https://matthewzenn.github.io/KryptosJS/)
 <br>
 ![screen](screenshot.png)
 <br>
