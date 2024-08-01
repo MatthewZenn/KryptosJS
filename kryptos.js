@@ -18,7 +18,7 @@ function gen(length) {
     num = Math.floor(Math.random() * (50 - 0 + 1) + 0);
     string += prefix.random()+snips.random()+suffix.random();
     string2 += prefix.random()+snips.random()+suffix.random();
-    let number = Math.floor(Math.random() * 13) + 1;
+    let number = Math.floor(Math.random() * 16) + 1;
     switch(number) {
       case 1:
         output += "var "+string+" = "+num+";";
@@ -27,7 +27,7 @@ function gen(length) {
         output += "const "+string+" = "+num+";";
         break;
       case 3:
-        output += "document.querySelector('"+string+"').selectionStyle('"+string2+"');";
+        output += "document.querySelector('."+string+"').selectionStyle('"+string2+"');";
         break;
       case 4:
         output += "document.getElementById('"+string+"').innerHTML == "+string2+";";
@@ -57,10 +57,16 @@ function gen(length) {
         output += "const "+string+" = require{ "+string+" }";
         break;
       case 13:
-        output += "from "+string2+" import *;";
+        output += num+" == false;"
         break;
       case 14:
         output += "import { "+string2+" } from "+string+";";
+        break;
+      case 15:
+        output += "function "+string2+"() => { "+string+"() }";
+        break;
+      case 16:
+        output += "/*"+string+" "+num+" "+string2+"*/";
         break;
     }
   }
