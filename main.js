@@ -1,4 +1,4 @@
-import * as kryptos from "./kryptos.js";
+import * as kryptos from "./kryptos.mjs";
 var input = document.getElementById('input');
 
 console.log(kryptos.gen(5))
