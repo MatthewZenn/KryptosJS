@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script id="prism" type="text/javascript" src="prism.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -10,7 +11,11 @@
     <link href="prism.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>The Pseudo-Code Generator of The Future...</h1>
+    <header>
+      <img src="Assets/icon.png">
+      <h3>KryptosJs</h3>
+    </header>
+    <h1>The Pseudo-Code Generator of The Future:</h1>
     <pre class="codeblock">
       <code class="lang-js" id="jsblock">
 
@@ -18,11 +23,13 @@
     </pre>
     <div class="container">
       <p>kryptos.gen(</p>
-      <input id="input" type="text" value="30">
+      <input id="input" type="text" value="50">
       <p>)</p>
+      <br>
+      <button id="go">&#xE768;</button>
+      <button id="copy">&#xE8C8;</button>
     </div>
     <script src="main.js" type="module"></script>
     <script src="kryptos.js" type="module"></script>
-    <script src="prism.js"></script>
   </body>
 </html>

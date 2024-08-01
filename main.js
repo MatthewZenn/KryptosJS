@@ -9,6 +9,23 @@ function writer(number) {
 
 document.getElementById('go').addEventListener('click', () => {
   writer(input.value);
+  document.getElementById('prism').remove();
+  sleep(150).then(() => {
+    colorize()
+  });
 });
 
-writer(30);
+function colorize() {
+  var theScript = document.createElement("script");
+  theScript.setAttribute("type","text/javascript");
+  theScript.setAttribute("src","prism.js");
+  theScript.setAttribute("id","prism");
+  document.getElementsByTagName("head")[0].appendChild(theScript);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+writer(50);
+colorize();
