@@ -1,6 +1,6 @@
 const snips = ['ou', 'ea', 'it', 'oo', 'ee', 'oa', 'au', 'i', 'a', 'o'];
 const prefix = ['sh', 'wh', 'st', 'th', 'pre', 'un', 'in', 'co', 'po', 'f', 'h', 'p', 'ph'];
-const suffix = ['th', 'sh', 'ould', 'ld', 'ts', 'ght', 'is', 'ds', 'es', 'able', 'ize', 'rs', 'wds', 's', 't', 'ne', 'nes'];
+const suffix = ['th', 'sh', 'ould', 'ld', 'ts', 'ght', 'is', 'ds', 'es', 'able', 'ize', 'rs', 'wds', 's', 't', 'ne', 'nes', 'us', 'est'];
 var string = '';
 var string2 = '';
 var num = 0;
